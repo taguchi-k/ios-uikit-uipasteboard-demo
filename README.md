@@ -8,7 +8,7 @@ NSObject
 ## 主要メソッド
 
 | メソッド名 | 説明 | サンプル |
-|:-----------:|:------------:|:------------:|
+|:-----------:|:------------:|:------------|
 | setValue | 文字列または画像をペーストボードにコピーする | pasteboard?.setValue(text, forPasteboardType: PasteBoardKey.text) |
 | value | 文字列または画像をペーストボードにペーストする | let text = pasteboard?.value(forPasteboardType: PasteBoardKey.text) as! String |
 
