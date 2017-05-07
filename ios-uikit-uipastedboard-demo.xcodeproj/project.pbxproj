@@ -146,7 +146,7 @@
 				TargetAttributes = {
 					BC0717821E5CF66900FED2F4 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = UE5DCQPTRB;
+						DevelopmentTeam = PCCZJUYRT6;
 						ProvisioningStyle = Automatic;
 					};
 					BC0717961E5CF66900FED2F4 = {
@@ -339,8 +339,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = UE5DCQPTRB;
+				DEVELOPMENT_TEAM = PCCZJUYRT6;
 				INFOPLIST_FILE = "ios-uikit-uipastedboard-demo/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.st-ventures.ios-uikit-uipastedboard-demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -352,8 +353,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = UE5DCQPTRB;
+				DEVELOPMENT_TEAM = PCCZJUYRT6;
 				INFOPLIST_FILE = "ios-uikit-uipastedboard-demo/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.st-ventures.ios-uikit-uipastedboard-demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -410,6 +412,7 @@
 				BC0717A21E5CF66900FED2F4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BC0717A31E5CF66900FED2F4 /* Build configuration list for PBXNativeTarget "ios-uikit-uipastedboard-demoTests" */ = {
 			isa = XCConfigurationList;
@@ -418,6 +421,7 @@
 				BC0717A51E5CF66900FED2F4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

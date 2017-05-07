@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,25 +21,86 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kV8-h1-X5X">
-                                <rect key="frame" x="7" y="123" width="343" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="クリップボード(Text)にコピー"/>
-                                <connections>
-                                    <action selector="didTapClipBoard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KxW-xT-RbT"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="del-Z2-fpk">
-                                <rect key="frame" x="16" y="195" width="343" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="クリップボード(Text)にペースト"/>
-                                <connections>
-                                    <action selector="didTapClipBoard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HnV-OH-fzv"/>
-                                    <action selector="didTapPast:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wCB-Iw-q1Y"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="HFi-9R-gTF">
+                                <rect key="frame" x="0.0" y="161" width="375" height="345"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kV8-h1-X5X">
+                                        <rect key="frame" x="83.5" y="0.0" width="208" height="30"/>
+                                        <state key="normal" title="クリップボード(Text)にコピー"/>
+                                        <connections>
+                                            <action selector="didTapClipBoard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KxW-xT-RbT"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="del-Z2-fpk">
+                                        <rect key="frame" x="134.5" y="45" width="106" height="30"/>
+                                        <state key="normal" title="Textをペースト"/>
+                                        <connections>
+                                            <action selector="didTapPaste:" destination="BYZ-38-t0r" eventType="touchUpInside" id="H8c-9T-FOe"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sqv-ul-KFA">
+                                        <rect key="frame" x="77" y="90" width="221" height="30"/>
+                                        <state key="normal" title="クリップボード(Image)にコピー">
+                                            <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="didTapImageClipBoard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rZ6-aZ-NM6"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mpk-xb-x9d">
+                                        <rect key="frame" x="128" y="135" width="119" height="30"/>
+                                        <state key="normal" title="Imageをペースト">
+                                            <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="didTapImagePaste:" destination="BYZ-38-t0r" eventType="touchUpInside" id="a7X-4P-XEP"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rsh-gs-xzh">
+                                        <rect key="frame" x="83.5" y="180" width="208" height="30"/>
+                                        <state key="normal" title="クリップボード(URL)にコピー">
+                                            <color key="titleColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="didTapURLClipBoard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XII-5l-auD"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Zd-tZ-bdy">
+                                        <rect key="frame" x="134.5" y="225" width="106" height="30"/>
+                                        <state key="normal" title="URLをペースト">
+                                            <color key="titleColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="didTapURLPaste:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XWm-8h-HOs"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u74-ts-bqT">
+                                        <rect key="frame" x="79.5" y="270" width="216" height="30"/>
+                                        <state key="normal" title="クリップボード(Color)にコピー">
+                                            <color key="titleColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="didTapColorClipBoard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TdK-mH-fLO"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qds-Ts-fQT">
+                                        <rect key="frame" x="130.5" y="315" width="114" height="30"/>
+                                        <state key="normal" title="Colorをペースト">
+                                            <color key="titleColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="didTapColorPaste:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IwF-gG-CMd"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="HFi-9R-gTF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4WP-3P-4Ay"/>
+                            <constraint firstItem="HFi-9R-gTF" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="Zee-0a-FiA"/>
+                            <constraint firstItem="HFi-9R-gTF" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="urk-zs-7tE"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
